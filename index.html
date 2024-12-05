@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Loader Example</title>
+    <script src="content-loader.js" defer></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      /* Fixed Header Style */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+        z-index: 1000;
+      }
+
+      /* Fixed Footer Style */
+      footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+        z-index: 1000;
+      }
+
+      /* Scrollable Content Area */
+      .content {
+        position: absolute;
+        top: 80px; /* Space for header */
+        bottom: 100px; /* Space for footer */
+        left: 0;
+        right: 0;
+        overflow-y: auto;
+        padding: 20px;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+
+      pre {
+        background-color: #f4f4f4;
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+        font-size: 14px;
+      }
+
+      code {
+        color: #e74c3c;
+      }
+
+      .installation,
+      .features,
+      .usage {
+        margin-top: 20px;
+      }
+
+      .installation ul,
+      .features ul,
+      .usage ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      .installation li,
+      .features li,
+      .usage li {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Fixed Header -->
+    <header>
+      <content-loader page-url="inc/header.html"></content-loader>
+    </header>
+
+    <!-- Scrollable Page Content -->
+    <main>
+      <div class="content">
+        <h1>Content Loader Library</h1>
+
+        <section class="features">
+          <h2>Features</h2>
+          <ul>
+            <li>
+              <strong>Custom Tag Support:</strong> Dynamically load content
+              using the <code>&lt;content-loader&gt;</code> tag.
+            </li>
+            <li>
+              <strong>Error Handling:</strong> Handles missing attributes or
+              failed requests gracefully.
+            </li>
+            <li>
+              <strong>Reusable and Lightweight:</strong> Suitable for all
+              types of web projects.
+            </li>
+            <li>
+              <strong>Developer-Friendly:</strong> Easy to integrate and
+              extend.
+            </li>
+          </ul>
+        </section>
+
+        <section class="installation">
+          <h2>Installation</h2>
+          <ul>
+            <li>
+              Clone this repository:
+              <pre><code>git clone https://github.com/your-username/content-loader.git</code></pre>
+            </li>
+          </ul>
+        </section>
+
+        <section class="usage">
+          <h2>How to Use</h2>
+          <ul>
+            <li>
+              Add the following tag in your HTML:
+              <pre><code>&lt;content-loader page-url="path/to/your/file.html"&gt;&lt;/content-loader&gt;</code></pre>
+            </li>
+            <li>
+              Include this <code>content-loader.js</code> script in your
+              project.
+            </li>
+            <li>
+              On page load, all <code>&lt;content-loader&gt;</code> tags will
+              be replaced with the content from their respective
+              <code>page-url</code>.
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <!-- Fixed Footer -->
+    <footer>
+      <content-loader page-url="inc/footer.html"></content-loader>
+    </footer>
+  </body>
+</html>
