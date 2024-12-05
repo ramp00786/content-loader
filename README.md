@@ -21,7 +21,7 @@ A lightweight and reusable JavaScript library that allows developers to dynamica
 
 1. Download or clone this repository:
    ```bash
-   git clone https://github.com/your-username/content-loader.git
+   git clone https://github.com/ramp00786/content-loader.git
 
 ## How to use
 - Add the following tag in your HTML:
